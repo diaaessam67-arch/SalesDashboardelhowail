@@ -689,7 +689,7 @@ const loginBg = (function(){
     const count = Math.min(70, Math.max(24, Math.round((w * h) / 15000)));
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * w, y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+      vx: (Math.random() - 0.5) * 0.7, vy: (Math.random() - 0.5) * 0.7,
       r: 1.1 + Math.random() * 1.3
     }));
   }
@@ -707,7 +707,7 @@ const loginBg = (function(){
       }
       p.vx *= 0.99; p.vy *= 0.99;
       const sp = Math.hypot(p.vx, p.vy);
-      if(sp > 0.55){ p.vx = p.vx / sp * 0.55; p.vy = p.vy / sp * 0.55; }
+      if(sp > 1.5){ p.vx = p.vx / sp * 1.5; p.vy = p.vy / sp * 1.5; }
       if(p.x < 0) p.x = w; else if(p.x > w) p.x = 0;
       if(p.y < 0) p.y = h; else if(p.y > h) p.y = 0;
     }
